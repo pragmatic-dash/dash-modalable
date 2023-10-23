@@ -1,0 +1,11 @@
+include dash_modalable/dash_modalable.min.js
+include dash_modalable/dash_modalable.min.js.map
+include dash_modalable/async-*.js
+include dash_modalable/async-*.js.map
+include dash_modalable/*-shared.js
+include dash_modalable/*-shared.js.map
+include dash_modalable/metadata.json
+include dash_modalable/package-info.json
+include README.md
+include LICENSE
+include package.json

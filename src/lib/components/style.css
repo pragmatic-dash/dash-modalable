@@ -1,0 +1,56 @@
+
+.dash-image-model-btn {
+    position: absolute;
+    z-index: 1;
+    bottom:  5px;
+    right:  5px;
+    background: rgba(0,0,0,0.05);
+    border:  0;
+    width:  40px;
+    height:  40px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    transition:  transform .3s;
+    font-size: 0;
+    opacity: 1;
+    pointer-events: auto;
+    cursor:  pointer;
+  }
+  .dash-image-model-btn:hover {
+    transform: scale(1.125);
+  }
+  .dash-image-model-btn span {
+    background: white;
+    width:  4px;
+    height:  4px;
+    border-top:  2.5px solid #111; /* color */
+    border-left:  2.5px solid #111; /* color */
+    position: absolute;
+    outline: 1px solid transparent;
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0);
+    will-change: transform;
+    -webkit-perspective: 1000;
+    transition:  .3s;
+    transition-delay: .75s;
+  }
+  .dash-image-model-btn span:nth-child(1) {
+    top: 11px;
+    left: 11px;
+  }
+  .dash-image-model-btn span:nth-child(2) {
+    top: 11px;
+    left: 22px;
+    transform: rotate(90deg);
+  }
+  .dash-image-model-btn span:nth-child(3) {
+    top: 22px;
+    left: 11px;
+    transform: rotate(-90deg);
+  }
+  .dash-image-model-btn span:nth-child(4) {
+    top: 22px;
+    left: 22px;
+    transform: rotate(-180deg);
+  }
+  

@@ -1,0 +1,86 @@
+{
+  "src/lib/components/DashModalable.react.js": {
+    "description": "ExampleComponent is an example component.\nIt takes a property, `label`, and\ndisplays it.\nIt renders an input with the property `value`\nwhich is editable by the user.",
+    "displayName": "DashModalable",
+    "methods": [
+      {
+        "name": "openModal",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      },
+      {
+        "name": "closeModal",
+        "docblock": null,
+        "modifiers": [],
+        "params": [],
+        "returns": null
+      }
+    ],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID used to identify this component in Dash callbacks."
+      },
+      "children": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "node"
+            },
+            {
+              "name": "array"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
+      "modalChildren": {
+        "type": {
+          "name": "union",
+          "value": [
+            {
+              "name": "node"
+            },
+            {
+              "name": "array"
+            }
+          ]
+        },
+        "required": false,
+        "description": ""
+      },
+      "modalZoomable": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": ""
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "",
+        "defaultValue": {
+          "value": "{\n    modalZoomable: true,\n    style: {\n        width: \"100%\",\n        height: \"100%\"\n    }\n}",
+          "computed": false
+        }
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash-assigned callback that should be called to report property changes\nto Dash, to make them available for callbacks."
+      }
+    }
+  }
+}
