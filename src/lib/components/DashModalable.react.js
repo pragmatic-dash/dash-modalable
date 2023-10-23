@@ -5,7 +5,7 @@ import "./style.css";
 
 const modal = {
     position: "fixed",
-    zIndex: 1,
+    zIndex: 9,
     left: 0,
     top: 0,
     width: "100vw",
