@@ -1,7 +1,7 @@
 
 .dash-image-model-btn {
     position: absolute;
-    z-index: 10;
+    z-index: 9;
     bottom:  5px;
     right:  5px;
     background: rgba(0,0,0,0.05);

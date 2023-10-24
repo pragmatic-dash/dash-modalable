@@ -39,7 +39,7 @@
           ]
         },
         "required": false,
-        "description": ""
+        "description": "This option controls the content of the current component."
       },
       "modalChildren": {
         "type": {
@@ -54,25 +54,47 @@
           ]
         },
         "required": false,
-        "description": ""
+        "description": "This option controls the content of the pop-up Modal."
       },
       "modalZoomable": {
         "type": {
           "name": "bool"
         },
         "required": false,
-        "description": ""
+        "description": "This option controls whether the pop-up Modal allows free content scaling.",
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        }
+      },
+      "buttonOpen": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "This option controls whether the pop-up Modal is opened by a button.",
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        }
       },
       "style": {
         "type": {
           "name": "object"
         },
         "required": false,
-        "description": "",
+        "description": "This option controls the style of the current component (before popping up), and the core aspect to control is the width and height of the component.",
         "defaultValue": {
           "value": "{\n    modalZoomable: true,\n    style: {\n        width: \"100%\",\n        height: \"100%\"\n    }\n}",
           "computed": false
         }
+      },
+      "modalStyle": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "This option controls the style of the current component after it pops up. The core elements to control are the width and height of the component, as well as the z-index, etc."
       },
       "setProps": {
         "type": {

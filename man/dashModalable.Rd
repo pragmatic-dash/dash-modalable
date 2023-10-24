@@ -10,20 +10,24 @@ ExampleComponent is an example component. It takes a property, `label`, and disp
 }
 
 \usage{
-dashModalable(children=NULL, id=NULL, modalChildren=NULL,
-modalZoomable=NULL, style=NULL)
+dashModalable(children=NULL, id=NULL, buttonOpen=NULL, modalChildren=NULL,
+modalStyle=NULL, modalZoomable=NULL, style=NULL)
 }
 
 \arguments{
-\item{children}{A list of or a singular dash component, string or number | unnamed list. }
+\item{children}{A list of or a singular dash component, string or number | unnamed list. This option controls the content of the current component.}
 
 \item{id}{Character. The ID used to identify this component in Dash callbacks.}
 
-\item{modalChildren}{A list of or a singular dash component, string or number | unnamed list. }
+\item{buttonOpen}{Logical. This option controls whether the pop-up Modal is opened by a button.}
 
-\item{modalZoomable}{Logical. }
+\item{modalChildren}{A list of or a singular dash component, string or number | unnamed list. This option controls the content of the pop-up Modal.}
 
-\item{style}{Named list. }
+\item{modalStyle}{Named list. This option controls the style of the current component after it pops up. The core elements to control are the width and height of the component, as well as the z-index, etc.}
+
+\item{modalZoomable}{Logical. This option controls whether the pop-up Modal allows free content scaling.}
+
+\item{style}{Named list. This option controls the style of the current component (before popping up), and the core aspect to control is the width and height of the component.}
 }
 
 \value{named list of JSON elements corresponding to React.js properties and their values}

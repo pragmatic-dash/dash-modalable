@@ -23,6 +23,7 @@ class App extends Component {
                     children={<img src="https://picsum.photos/200/300" alt=""/>}
                     modalChildren={<img src="https://picsum.photos/500/500" alt=""/>}
                     modalZoomable={true}
+                    buttonOpen={false}
                 />
             </div>
         )
