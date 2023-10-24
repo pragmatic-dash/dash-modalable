@@ -78,6 +78,17 @@
           "computed": false
         }
       },
+      "closeOnModalContentClick": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "This option controls whether the pop-up Modal is closed by clicking on the content of the Modal.",
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        }
+      },
       "style": {
         "type": {
           "name": "object"

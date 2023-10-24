@@ -21,9 +21,10 @@ class App extends Component {
                     setProps={this.setProps}
                     style={{width: "200px", height: "300px"}}
                     children={<img src="https://picsum.photos/200/300" alt=""/>}
-                    modalChildren={<img src="https://picsum.photos/500/500" alt=""/>}
+                    modalChildren={<img src="https://picsum.photos/1024/960" alt=""/>}
                     modalZoomable={true}
                     buttonOpen={false}
+                    closeOnModalContentClick={true}
                 />
             </div>
         )

@@ -1,9 +1,9 @@
 # AUTO GENERATED FILE - DO NOT EDIT
 
 #' @export
-dashModalable <- function(children=NULL, id=NULL, buttonOpen=NULL, modalChildren=NULL, modalStyle=NULL, modalZoomable=NULL, style=NULL) {
+dashModalable <- function(children=NULL, id=NULL, buttonOpen=NULL, closeOnModalContentClick=NULL, modalChildren=NULL, modalStyle=NULL, modalZoomable=NULL, style=NULL) {
     
-    props <- list(children=children, id=id, buttonOpen=buttonOpen, modalChildren=modalChildren, modalStyle=modalStyle, modalZoomable=modalZoomable, style=style)
+    props <- list(children=children, id=id, buttonOpen=buttonOpen, closeOnModalContentClick=closeOnModalContentClick, modalChildren=modalChildren, modalStyle=modalStyle, modalZoomable=modalZoomable, style=style)
     if (length(props) > 0) {
         props <- props[!vapply(props, is.null, logical(1))]
     }
@@ -11,7 +11,7 @@ dashModalable <- function(children=NULL, id=NULL, buttonOpen=NULL, modalChildren
         props = props,
         type = 'DashModalable',
         namespace = 'dash_modalable',
-        propNames = c('children', 'id', 'buttonOpen', 'modalChildren', 'modalStyle', 'modalZoomable', 'style'),
+        propNames = c('children', 'id', 'buttonOpen', 'closeOnModalContentClick', 'modalChildren', 'modalStyle', 'modalZoomable', 'style'),
         package = 'dashModalable'
         )
 

@@ -10,7 +10,8 @@ ExampleComponent is an example component. It takes a property, `label`, and disp
 }
 
 \usage{
-dashModalable(children=NULL, id=NULL, buttonOpen=NULL, modalChildren=NULL,
+dashModalable(children=NULL, id=NULL, buttonOpen=NULL,
+closeOnModalContentClick=NULL, modalChildren=NULL,
 modalStyle=NULL, modalZoomable=NULL, style=NULL)
 }
 
@@ -20,6 +21,8 @@ modalStyle=NULL, modalZoomable=NULL, style=NULL)
 \item{id}{Character. The ID used to identify this component in Dash callbacks.}
 
 \item{buttonOpen}{Logical. This option controls whether the pop-up Modal is opened by a button.}
+
+\item{closeOnModalContentClick}{Logical. This option controls whether the pop-up Modal is closed by clicking on the content of the Modal.}
 
 \item{modalChildren}{A list of or a singular dash component, string or number | unnamed list. This option controls the content of the pop-up Modal.}
 

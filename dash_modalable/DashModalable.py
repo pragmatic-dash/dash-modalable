@@ -23,6 +23,10 @@ Keyword arguments:
     This option controls whether the pop-up Modal is opened by a
     button.
 
+- closeOnModalContentClick (boolean; default True):
+    This option controls whether the pop-up Modal is closed by
+    clicking on the content of the Modal.
+
 - modalChildren (a list of or a singular dash component, string or number | list; optional):
     This option controls the content of the pop-up Modal.
 
@@ -44,10 +48,10 @@ Keyword arguments:
     _namespace = 'dash_modalable'
     _type = 'DashModalable'
     @_explicitize_args
-    def __init__(self, children=None, id=Component.UNDEFINED, modalChildren=Component.UNDEFINED, modalZoomable=Component.UNDEFINED, buttonOpen=Component.UNDEFINED, style=Component.UNDEFINED, modalStyle=Component.UNDEFINED, **kwargs):
-        self._prop_names = ['children', 'id', 'buttonOpen', 'modalChildren', 'modalStyle', 'modalZoomable', 'style']
+    def __init__(self, children=None, id=Component.UNDEFINED, modalChildren=Component.UNDEFINED, modalZoomable=Component.UNDEFINED, buttonOpen=Component.UNDEFINED, closeOnModalContentClick=Component.UNDEFINED, style=Component.UNDEFINED, modalStyle=Component.UNDEFINED, **kwargs):
+        self._prop_names = ['children', 'id', 'buttonOpen', 'closeOnModalContentClick', 'modalChildren', 'modalStyle', 'modalZoomable', 'style']
         self._valid_wildcard_attributes =            []
-        self.available_properties = ['children', 'id', 'buttonOpen', 'modalChildren', 'modalStyle', 'modalZoomable', 'style']
+        self.available_properties = ['children', 'id', 'buttonOpen', 'closeOnModalContentClick', 'modalChildren', 'modalStyle', 'modalZoomable', 'style']
         self.available_wildcard_properties =            []
         _explicit_args = kwargs.pop('_explicit_args')
         _locals = locals()

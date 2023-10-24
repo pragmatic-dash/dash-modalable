@@ -35,7 +35,10 @@ const modalContent = {
 };
 
 const Modal = ({ onOpen, children, buttonOpen }) => {
-    return <div style={{ position: "relative" }} onClick={buttonOpen?null:onOpen}>
+    return <div style={{
+        position: "relative",
+        "cursor": buttonOpen ? "default" : "pointer",
+    }} onClick={buttonOpen ? null : onOpen}>
         {buttonOpen &&
             <button className="dash-image-model-btn" onClick={onOpen} >
                 <span></span>
@@ -50,14 +53,19 @@ const Modal = ({ onOpen, children, buttonOpen }) => {
     </div>
 };
 
-const ModalContent = ({ onClose, children, style }) => {
+const ModalContent = ({ onClose, children, style, closeOnModalContentClick }) => {
     const mergedStyle = { ...modal, ...style };
     return (
-        <div style={mergedStyle}>
+        <div style={mergedStyle} onClick={onClose}>
             <span style={close} onClick={onClose}>
                 &times;
             </span>
-            <div style={modalContent}>{children}</div>
+            <div style={modalContent} onClick={(e)=>{
+                if (closeOnModalContentClick) {
+                    onClose();
+                }
+                e.stopPropagation();
+            }}>{children}</div>
         </div>
     );
 };
@@ -79,22 +87,22 @@ export default class DashModalable extends React.Component {
     }
 
     openModal = () => {
-        this.setState({ isOpen: true});
+        this.setState({ isOpen: true });
     }
 
     closeModal = () => {
-        this.setState({ isOpen: false});
+        this.setState({ isOpen: false });
     }
 
     render() {
-        const { id, children, modalStyle, modalChildren, modalZoomable, style, buttonOpen } = this.props;
+        const { id, children, modalStyle, modalChildren, modalZoomable, style, buttonOpen, closeOnModalContentClick } = this.props;
         return (
             <div style={style} id={id || ""}>
                 <Modal onOpen={this.openModal} buttonOpen={buttonOpen}>
                     {children}
                 </Modal>
                 {this.state.isOpen && (
-                    <ModalContent onClose={this.closeModal} style={modalStyle}>
+                    <ModalContent onClose={this.closeModal} style={modalStyle} closeOnModalContentClick>
                         {modalZoomable &&
                             <Space innerDivStyle={{
                                 display: "flex",
@@ -123,6 +131,7 @@ DashModalable.defaultProps = {
     },
     buttonOpen: true,
     modalZoomable: true,
+    closeOnModalContentClick: true,
 };
 
 DashModalable.propTypes = {
@@ -156,6 +165,11 @@ DashModalable.propTypes = {
      * This option controls whether the pop-up Modal is opened by a button.
      */
     buttonOpen: PropTypes.bool,
+
+    /**
+     * This option controls whether the pop-up Modal is closed by clicking on the content of the Modal.
+     */
+    closeOnModalContentClick: PropTypes.bool,
 
     /**
      * This option controls the style of the current component (before popping up), and the core aspect to control is the width and height of the component.
