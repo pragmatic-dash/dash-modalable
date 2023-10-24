@@ -1,5 +1,5 @@
 import dash_modalable
-from dash import Dash, callback, html, Input, Output
+from dash import Dash, html
 
 app = Dash(__name__)
 
