@@ -1,6 +1,6 @@
-# dash modalable
+# Dash Modalable
 
-dash modalable is a Dash component library.
+Dash Modalable converts any content into a pop-up Modal, generally suitable for image or chart enlargement (note that the popped-up content and the original content are not the same, be careful to avoid ID conflicts).
 
 Get started with:
 1. Install Dash and its dependencies: https://dash.plotly.com/installation
